@@ -10,7 +10,6 @@
 		145F80041B048CC1005E4B04 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F80031B048CC1005E4B04 /* AboutViewController.swift */; };
 		146837341AF529180084D103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146837331AF529180084D103 /* AppDelegate.swift */; };
 		146837361AF529180084D103 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146837351AF529180084D103 /* ViewController.swift */; };
-		146837391AF529180084D103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146837371AF529180084D103 /* Main.storyboard */; };
 		1468373B1AF529180084D103 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1468373A1AF529180084D103 /* Images.xcassets */; };
 		1468373E1AF529180084D103 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1468373C1AF529180084D103 /* LaunchScreen.xib */; };
 		1468374A1AF529180084D103 /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146837491AF529180084D103 /* BullsEyeTests.swift */; };
@@ -20,6 +19,7 @@
 		14BE24341AF9C11E0049BBA9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BE24321AF9C11E0049BBA9 /* Interface.storyboard */; };
 		14BE24361AF9C11E0049BBA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BE24351AF9C11E0049BBA9 /* Images.xcassets */; };
 		14BE24391AF9C11E0049BBA9 /* BullsEye WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 14BE24211AF9C11E0049BBA9 /* BullsEye WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		14D6F6DE1B06EA3B00891D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146837371AF529180084D103 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -327,7 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				146837391AF529180084D103 /* Main.storyboard in Resources */,
+				14D6F6DE1B06EA3B00891D92 /* Main.storyboard in Resources */,
 				1468373E1AF529180084D103 /* LaunchScreen.xib in Resources */,
 				1468373B1AF529180084D103 /* Images.xcassets in Resources */,
 			);
