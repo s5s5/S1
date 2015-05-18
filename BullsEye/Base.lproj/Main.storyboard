@@ -17,6 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="4vR-NB-pmg">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-K6-v71">
+                                <rect key="frame" x="83" y="105" width="402" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="398" id="L8u-Qg-V2i"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Skj-E4-zme"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIe-QB-5bT">
+                                <rect key="frame" x="493" y="110" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK4-fk-vPa">
+                                <rect key="frame" x="65" y="110" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYr-Ox-nfZ">
                                 <rect key="frame" x="259" y="155" width="50" height="30"/>
                                 <state key="normal" title="Hit Me!">
@@ -53,6 +77,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iZ-Gd-qh3">
+                                <rect key="frame" x="225" y="259" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPP-Q6-f4L">
                                 <rect key="frame" x="335" y="259" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -74,33 +104,6 @@
                                     <segue destination="GbQ-hU-VbX" kind="modal" modalTransitionStyle="flipHorizontal" id="8WG-b8-5CZ"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-K6-v71">
-                                <rect key="frame" x="83" y="105" width="402" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="398" id="L8u-Qg-V2i"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="sliderMoved:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Skj-E4-zme"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIe-QB-5bT">
-                                <rect key="frame" x="493" y="110" width="29" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK4-fk-vPa">
-                                <rect key="frame" x="65" y="110" width="10" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="999999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iZ-Gd-qh3">
-                                <rect key="frame" x="223" y="259" width="58" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -164,12 +167,9 @@
                                     <action selector="close" destination="GbQ-hU-VbX" eventType="touchUpInside" id="MQL-lA-Ege"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50b-sK-bRc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50b-sK-bRc">
                                 <rect key="frame" x="16" y="25" width="536" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="dzx-yv-L2p"/>
-                                </constraints>
                                 <string key="text">*** Bull’s Eye *** 
 Welcome to the awesome game of Bull’s Eye where you can win points and fame by dragging a slider.
  Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score. Enjoy!</string>
@@ -181,6 +181,7 @@ Welcome to the awesome game of Bull’s Eye where you can win points and fame by
                         <constraints>
                             <constraint firstItem="50b-sK-bRc" firstAttribute="top" secondItem="BnQ-TL-7PG" secondAttribute="bottom" constant="25" id="9QR-7c-Y2F"/>
                             <constraint firstItem="50b-sK-bRc" firstAttribute="leading" secondItem="ZA6-W1-M1E" secondAttribute="leadingMargin" id="Mk4-1O-jtH"/>
+                            <constraint firstItem="6Mw-9c-Wge" firstAttribute="top" secondItem="50b-sK-bRc" secondAttribute="bottom" constant="40" id="Ye9-Ee-Pyn"/>
                             <constraint firstItem="HhL-KD-c8y" firstAttribute="top" secondItem="6Mw-9c-Wge" secondAttribute="bottom" constant="25" id="ZwO-vo-kwZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="50b-sK-bRc" secondAttribute="trailing" id="hWZ-iZ-l2s"/>
                             <constraint firstAttribute="centerX" secondItem="6Mw-9c-Wge" secondAttribute="centerX" id="xC3-3l-2PN"/>
@@ -194,6 +195,9 @@ Welcome to the awesome game of Bull’s Eye where you can win points and fame by
             <point key="canvasLocation" x="870" y="319"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="480" height="320"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
