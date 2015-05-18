@@ -10,90 +10,108 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var currentValue = 0
-    var targetValue = 0
-    var score = 0
-    var round = 0
+  var currentValue = 0
+  var targetValue = 0
+  var score = 0
+  var round = 0
 
-    @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var targetLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var roundLabel: UILabel!
+  @IBOutlet weak var slider: UISlider!
+  @IBOutlet weak var targetLabel: UILabel!
+  @IBOutlet weak var scoreLabel: UILabel!
+  @IBOutlet weak var roundLabel: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        startNewGame()
-        updateLabels()
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    startNewGame()
+    updateLabels()
+
+    let thumbImageNormal = UIImage(named: "SliderThumb-Normal")
+    slider.setThumbImage(thumbImageNormal, forState: .Normal)
+
+    let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")
+    slider.setThumbImage(thumbImageHighlighted, forState: .Highlighted)
+
+    let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+
+    if let trackLeftImage = UIImage(named: "SliderTrackLeft") {
+      let trackLeftResizable = trackLeftImage.resizableImageWithCapInsets(insets)
+      slider.setMinimumTrackImage(trackLeftResizable, forState: .Normal)
     }
     
-    func startNewGame() {
-        score = 0
-        round = 0
-        startNewRound()
+    if let trackRightImage = UIImage(named: "SliderTrackRight") {
+      let trackRightResizable = trackRightImage.resizableImageWithCapInsets(insets)
+      slider.setMaximumTrackImage(trackRightResizable, forState: .Normal)
+    }
+  }
+
+  func startNewGame() {
+    score = 0
+    round = 0
+    startNewRound()
+  }
+
+  func startNewRound() {
+    round++
+    targetValue = 1 + Int(arc4random_uniform(100))
+    currentValue = 1 + Int(arc4random_uniform(100))
+    slider.value = Float(currentValue);
+  }
+
+  func updateLabels() {
+    targetLabel.text = String(targetValue)
+    scoreLabel.text = String(score)
+    roundLabel.text = String(round)
+  }
+
+  @IBAction func startOver() {
+    startNewGame()
+    updateLabels()
+  }
+
+  @IBAction func showAlert() {
+    let difference = abs(currentValue - targetValue)
+    var points = 100 - difference
+
+    var title: String
+    if difference == 0 {
+      title = "Perfect!"
+      points += 100
+    } else if difference < 5 {
+      title = "You almost had it!"
+      if difference == 1 {
+        points += 50
+      }
+    } else if difference < 10 {
+      title = "Pretty good!"
+    } else {
+      title = "Not even close..."
     }
 
-    func startNewRound() {
-        round++
-        targetValue = 1 + Int(arc4random_uniform(100))
-        currentValue = 1 + Int(arc4random_uniform(100))
-        slider.value = Float(currentValue);
-    }
+    score += points
 
-    func updateLabels() {
-        targetLabel.text = String(targetValue)
-        scoreLabel.text = String(score)
-        roundLabel.text = String(round)
-    }
-    
-    @IBAction func startOver() {
-        startNewGame()
-        updateLabels()
-    }
+    let message = "You scored \(points) points"
 
-    @IBAction func showAlert() {
-        let difference = abs(currentValue - targetValue)
-        var points = 100 - difference
+    let alert = UIAlertController(title: title,
+        message: message, preferredStyle: .Alert)
 
-        var title: String
-        if difference == 0 {
-            title = "Perfect!"
-            points += 100
-        } else if difference < 5 {
-            title = "You almost had it!"
-            if difference == 1 {
-                points += 50
-            }
-        } else if difference < 10 {
-            title = "Pretty good!"
-        } else {
-            title = "Not even close..."
-        }
+    let action = UIAlertAction(title: "OK", style: .Default,
+        handler: {
+          // This closure tells the app to start a new round and
+          // update the labels when the alert is dismissed.
+          action in
+          self.startNewRound()
+          self.updateLabels()
+        })
 
-        score += points
+    alert.addAction(action)
 
-        let message = "You scored \(points) points"
+    presentViewController(alert, animated: true, completion: nil)
 
-        let alert = UIAlertController(title: title,
-                message: message, preferredStyle: .Alert)
+  }
 
-        let action = UIAlertAction(title: "OK", style: .Default,
-                handler: {
-                    // This closure tells the app to start a new round and
-                    // update the labels when the alert is dismissed.
-                    action in
-                    self.startNewRound()
-                    self.updateLabels()
-                })
-
-        alert.addAction(action)
-
-        presentViewController(alert, animated: true, completion: nil)
-
-    }
-
-    @IBAction func sliderMoved(slider: UISlider) {
-        currentValue = lroundf(slider.value)
-    }
+  @IBAction func sliderMoved(slider: UISlider) {
+    currentValue = lroundf(slider.value)
+  }
 
 }
 
