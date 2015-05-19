@@ -20,6 +20,7 @@
 		14BE24361AF9C11E0049BBA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BE24351AF9C11E0049BBA9 /* Images.xcassets */; };
 		14BE24391AF9C11E0049BBA9 /* BullsEye WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 14BE24211AF9C11E0049BBA9 /* BullsEye WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14D6F6DE1B06EA3B00891D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146837371AF529180084D103 /* Main.storyboard */; };
+		14E9AAC41B0B510D002C6F57 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 14E9AAC31B0B510D002C6F57 /* BullsEye.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		14BE24311AF9C11E0049BBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14BE24331AF9C11E0049BBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		14BE24351AF9C11E0049BBA9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		14E9AAC31B0B510D002C6F57 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		146837301AF529180084D103 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				14E9AAC31B0B510D002C6F57 /* BullsEye.html */,
 				146837331AF529180084D103 /* AppDelegate.swift */,
 				146837351AF529180084D103 /* ViewController.swift */,
 				145F80031B048CC1005E4B04 /* AboutViewController.swift */,
@@ -298,6 +301,7 @@
 					};
 					14BE242A1AF9C11E0049BBA9 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 45PP2DW74T;
 					};
 				};
 			};
@@ -328,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D6F6DE1B06EA3B00891D92 /* Main.storyboard in Resources */,
+				14E9AAC41B0B510D002C6F57 /* BullsEye.html in Resources */,
 				1468373E1AF529180084D103 /* LaunchScreen.xib in Resources */,
 				1468373B1AF529180084D103 /* Images.xcassets in Resources */,
 			);
@@ -598,6 +603,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -606,6 +613,7 @@
 				INFOPLIST_FILE = "BullsEye WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -616,10 +624,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = BullsEye_WatchKit_Extension;
 				INFOPLIST_FILE = "BullsEye WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
