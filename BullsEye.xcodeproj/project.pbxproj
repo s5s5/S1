@@ -11,14 +11,9 @@
 		146837341AF529180084D103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146837331AF529180084D103 /* AppDelegate.swift */; };
 		146837361AF529180084D103 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146837351AF529180084D103 /* ViewController.swift */; };
 		1468373B1AF529180084D103 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1468373A1AF529180084D103 /* Images.xcassets */; };
-		1468373E1AF529180084D103 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1468373C1AF529180084D103 /* LaunchScreen.xib */; };
 		1468374A1AF529180084D103 /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146837491AF529180084D103 /* BullsEyeTests.swift */; };
-		14BE24261AF9C11E0049BBA9 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BE24251AF9C11E0049BBA9 /* InterfaceController.swift */; };
-		14BE24281AF9C11E0049BBA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BE24271AF9C11E0049BBA9 /* Images.xcassets */; };
-		14BE242C1AF9C11E0049BBA9 /* BullsEye WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 14BE242B1AF9C11E0049BBA9 /* BullsEye WatchKit App.app */; };
-		14BE24341AF9C11E0049BBA9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BE24321AF9C11E0049BBA9 /* Interface.storyboard */; };
-		14BE24361AF9C11E0049BBA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BE24351AF9C11E0049BBA9 /* Images.xcassets */; };
-		14BE24391AF9C11E0049BBA9 /* BullsEye WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 14BE24211AF9C11E0049BBA9 /* BullsEye WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		14CB2AB51B0DF5ED007B821B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CB2AB31B0DF5ED007B821B /* Default-568h@2x.png */; };
+		14CB2AB61B0DF5ED007B821B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CB2AB41B0DF5ED007B821B /* Default@2x.png */; };
 		14D6F6DE1B06EA3B00891D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146837371AF529180084D103 /* Main.storyboard */; };
 		14E9AAC41B0B510D002C6F57 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 14E9AAC31B0B510D002C6F57 /* BullsEye.html */; };
 /* End PBXBuildFile section */
@@ -31,35 +26,7 @@
 			remoteGlobalIDString = 1468372D1AF529180084D103;
 			remoteInfo = BullsEye;
 		};
-		14BE242D1AF9C11E0049BBA9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146837261AF529180084D103 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14BE242A1AF9C11E0049BBA9;
-			remoteInfo = "BullsEye WatchKit App";
-		};
-		14BE24371AF9C11E0049BBA9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146837261AF529180084D103 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14BE24201AF9C11E0049BBA9;
-			remoteInfo = "BullsEye WatchKit Extension";
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		14BE24401AF9C11E0049BBA9 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				14BE24391AF9C11E0049BBA9 /* BullsEye WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		145F80031B048CC1005E4B04 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -69,18 +36,11 @@
 		146837351AF529180084D103 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		146837381AF529180084D103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1468373A1AF529180084D103 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1468373D1AF529180084D103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		146837431AF529180084D103 /* BullsEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146837481AF529180084D103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		146837491AF529180084D103 /* BullsEyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeTests.swift; sourceTree = "<group>"; };
-		14BE24211AF9C11E0049BBA9 /* BullsEye WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BullsEye WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		14BE24241AF9C11E0049BBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14BE24251AF9C11E0049BBA9 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		14BE24271AF9C11E0049BBA9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		14BE242B1AF9C11E0049BBA9 /* BullsEye WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BullsEye WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		14BE24311AF9C11E0049BBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14BE24331AF9C11E0049BBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		14BE24351AF9C11E0049BBA9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		14CB2AB31B0DF5ED007B821B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		14CB2AB41B0DF5ED007B821B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		14E9AAC31B0B510D002C6F57 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,13 +59,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14BE241E1AF9C11E0049BBA9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -114,8 +67,6 @@
 			children = (
 				146837301AF529180084D103 /* BullsEye */,
 				146837461AF529180084D103 /* BullsEyeTests */,
-				14BE24221AF9C11E0049BBA9 /* BullsEye WatchKit Extension */,
-				14BE242F1AF9C11E0049BBA9 /* BullsEye WatchKit App */,
 				1468372F1AF529180084D103 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,8 +76,6 @@
 			children = (
 				1468372E1AF529180084D103 /* BullsEye.app */,
 				146837431AF529180084D103 /* BullsEyeTests.xctest */,
-				14BE24211AF9C11E0049BBA9 /* BullsEye WatchKit Extension.appex */,
-				14BE242B1AF9C11E0049BBA9 /* BullsEye WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,13 +83,14 @@
 		146837301AF529180084D103 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				14CB2AB31B0DF5ED007B821B /* Default-568h@2x.png */,
+				14CB2AB41B0DF5ED007B821B /* Default@2x.png */,
 				14E9AAC31B0B510D002C6F57 /* BullsEye.html */,
 				146837331AF529180084D103 /* AppDelegate.swift */,
 				146837351AF529180084D103 /* ViewController.swift */,
 				145F80031B048CC1005E4B04 /* AboutViewController.swift */,
 				146837371AF529180084D103 /* Main.storyboard */,
 				1468373A1AF529180084D103 /* Images.xcassets */,
-				1468373C1AF529180084D103 /* LaunchScreen.xib */,
 				146837311AF529180084D103 /* Supporting Files */,
 			);
 			path = BullsEye;
@@ -171,42 +121,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		14BE24221AF9C11E0049BBA9 /* BullsEye WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				14BE24251AF9C11E0049BBA9 /* InterfaceController.swift */,
-				14BE24271AF9C11E0049BBA9 /* Images.xcassets */,
-				14BE24231AF9C11E0049BBA9 /* Supporting Files */,
-			);
-			path = "BullsEye WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		14BE24231AF9C11E0049BBA9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				14BE24241AF9C11E0049BBA9 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		14BE242F1AF9C11E0049BBA9 /* BullsEye WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				14BE24321AF9C11E0049BBA9 /* Interface.storyboard */,
-				14BE24351AF9C11E0049BBA9 /* Images.xcassets */,
-				14BE24301AF9C11E0049BBA9 /* Supporting Files */,
-			);
-			path = "BullsEye WatchKit App";
-			sourceTree = "<group>";
-		};
-		14BE24301AF9C11E0049BBA9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				14BE24311AF9C11E0049BBA9 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,12 +131,10 @@
 				1468372A1AF529180084D103 /* Sources */,
 				1468372B1AF529180084D103 /* Frameworks */,
 				1468372C1AF529180084D103 /* Resources */,
-				14BE24401AF9C11E0049BBA9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				14BE24381AF9C11E0049BBA9 /* PBXTargetDependency */,
 			);
 			name = BullsEye;
 			productName = BullsEye;
@@ -247,39 +159,6 @@
 			productReference = 146837431AF529180084D103 /* BullsEyeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		14BE24201AF9C11E0049BBA9 /* BullsEye WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 14BE243F1AF9C11E0049BBA9 /* Build configuration list for PBXNativeTarget "BullsEye WatchKit Extension" */;
-			buildPhases = (
-				14BE241D1AF9C11E0049BBA9 /* Sources */,
-				14BE241E1AF9C11E0049BBA9 /* Frameworks */,
-				14BE241F1AF9C11E0049BBA9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				14BE242E1AF9C11E0049BBA9 /* PBXTargetDependency */,
-			);
-			name = "BullsEye WatchKit Extension";
-			productName = "BullsEye WatchKit Extension";
-			productReference = 14BE24211AF9C11E0049BBA9 /* BullsEye WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
-		};
-		14BE242A1AF9C11E0049BBA9 /* BullsEye WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 14BE243E1AF9C11E0049BBA9 /* Build configuration list for PBXNativeTarget "BullsEye WatchKit App" */;
-			buildPhases = (
-				14BE24291AF9C11E0049BBA9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "BullsEye WatchKit App";
-			productName = "BullsEye WatchKit App";
-			productReference = 14BE242B1AF9C11E0049BBA9 /* BullsEye WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -295,13 +174,6 @@
 					146837421AF529180084D103 = {
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = 1468372D1AF529180084D103;
-					};
-					14BE24201AF9C11E0049BBA9 = {
-						CreatedOnToolsVersion = 6.3;
-					};
-					14BE242A1AF9C11E0049BBA9 = {
-						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 45PP2DW74T;
 					};
 				};
 			};
@@ -320,8 +192,6 @@
 			targets = (
 				1468372D1AF529180084D103 /* BullsEye */,
 				146837421AF529180084D103 /* BullsEyeTests */,
-				14BE24201AF9C11E0049BBA9 /* BullsEye WatchKit Extension */,
-				14BE242A1AF9C11E0049BBA9 /* BullsEye WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -332,8 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D6F6DE1B06EA3B00891D92 /* Main.storyboard in Resources */,
+				14CB2AB51B0DF5ED007B821B /* Default-568h@2x.png in Resources */,
+				14CB2AB61B0DF5ED007B821B /* Default@2x.png in Resources */,
 				14E9AAC41B0B510D002C6F57 /* BullsEye.html in Resources */,
-				1468373E1AF529180084D103 /* LaunchScreen.xib in Resources */,
 				1468373B1AF529180084D103 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,24 +213,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14BE241F1AF9C11E0049BBA9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14BE24281AF9C11E0049BBA9 /* Images.xcassets in Resources */,
-				14BE242C1AF9C11E0049BBA9 /* BullsEye WatchKit App.app in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14BE24291AF9C11E0049BBA9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14BE24341AF9C11E0049BBA9 /* Interface.storyboard in Resources */,
-				14BE24361AF9C11E0049BBA9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,14 +237,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14BE241D1AF9C11E0049BBA9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14BE24261AF9C11E0049BBA9 /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -399,16 +244,6 @@
 			isa = PBXTargetDependency;
 			target = 1468372D1AF529180084D103 /* BullsEye */;
 			targetProxy = 146837441AF529180084D103 /* PBXContainerItemProxy */;
-		};
-		14BE242E1AF9C11E0049BBA9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14BE242A1AF9C11E0049BBA9 /* BullsEye WatchKit App */;
-			targetProxy = 14BE242D1AF9C11E0049BBA9 /* PBXContainerItemProxy */;
-		};
-		14BE24381AF9C11E0049BBA9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14BE24201AF9C11E0049BBA9 /* BullsEye WatchKit Extension */;
-			targetProxy = 14BE24371AF9C11E0049BBA9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -419,22 +254,6 @@
 				146837381AF529180084D103 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1468373C1AF529180084D103 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1468373D1AF529180084D103 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		14BE24321AF9C11E0049BBA9 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14BE24331AF9C11E0049BBA9 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -575,68 +394,6 @@
 			};
 			name = Release;
 		};
-		14BE243A1AF9C11E0049BBA9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "BullsEye WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		14BE243B1AF9C11E0049BBA9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "BullsEye WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		14BE243C1AF9C11E0049BBA9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				IBSC_MODULE = BullsEye_WatchKit_Extension;
-				INFOPLIST_FILE = "BullsEye WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Debug;
-		};
-		14BE243D1AF9C11E0049BBA9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				IBSC_MODULE = BullsEye_WatchKit_Extension;
-				INFOPLIST_FILE = "BullsEye WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -663,24 +420,6 @@
 			buildConfigurations = (
 				146837511AF529180084D103 /* Debug */,
 				146837521AF529180084D103 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		14BE243E1AF9C11E0049BBA9 /* Build configuration list for PBXNativeTarget "BullsEye WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				14BE243C1AF9C11E0049BBA9 /* Debug */,
-				14BE243D1AF9C11E0049BBA9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		14BE243F1AF9C11E0049BBA9 /* Build configuration list for PBXNativeTarget "BullsEye WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				14BE243A1AF9C11E0049BBA9 /* Debug */,
-				14BE243B1AF9C11E0049BBA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
