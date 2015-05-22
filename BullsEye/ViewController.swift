@@ -21,7 +21,7 @@ class ViewController: UIViewController {
   // At the start of each round, you calculate a random value and store it
   // in this variable. This is the value that the player has to try to set
   // on the slider.
-  var targetValue = 0
+  var targetValue = 0;
 
   // This variable keeps track of the player's score.
   var score = 0
@@ -30,7 +30,8 @@ class ViewController: UIViewController {
   // slider, labels and buttons) that you are interested in. By making outlets
   // for them you can refer to these controls from the code.
   @IBOutlet weak var slider: UISlider!
-  @IBOutlet weak var targetLabel: UILabel!
+  @IBOutlet weak var fireImage: UIImageView!
+  @IBOutlet weak var emojiLabel: UILabel!
 
   // This method is called while the app is starting up. At some point the main
   // view controller will be created. It will load its view from the storyboard
@@ -43,8 +44,7 @@ class ViewController: UIViewController {
   // the graphics for the slider.
   override func viewDidLoad() {
     super.viewDidLoad()
-    startNewGame()
-    updateLabels()
+
 
     let thumbImageNormal = UIImage(named: "Fire-engine1")
     slider.setThumbImage(thumbImageNormal, forState: .Normal)
@@ -59,6 +59,19 @@ class ViewController: UIViewController {
 
     }
     self.view.bringSubviewToFront(slider)
+
+    startNewGame()
+    updateLabels()
+    
+    fireImage.animationImages = [
+      UIImage(named: "Fire1")!,
+      UIImage(named: "Fire2")!,
+      UIImage(named: "Fire3")!,
+      UIImage(named: "Fire4")!
+    ]
+    
+    fireImage.animationDuration = 0.8
+    fireImage.startAnimating()
 
   }
 
@@ -77,17 +90,21 @@ class ViewController: UIViewController {
     // has a perfect score and 50 bonus points if he was very close.
     var title: String
     if difference == 0 {
-      title = "Perfect!"
+      title = "😄😗🙇👏🏻👍🏻😍😻✌🏻"
+      emojiLabel.text = "😄😗🙇👏🏻👍🏻😍😻✌🏻"
       points += 100
-    } else if difference < 5 {
-      title = "You almost had it!"
+    } else if difference < 50 {
+      title = "👏🏻👏🏻👏🏻👏🏻👏🏻👏🏻"
+      emojiLabel.text = "👏🏻👏🏻👏🏻👏🏻👏🏻👏🏻"
       if difference == 1 {
         points += 50
       }
-    } else if difference < 10 {
-      title = "Pretty good!"
+    } else if difference < 100 {
+      title = "😙😙😙😙"
+      emojiLabel.text = "😙😙😙😙"
     } else {
-      title = "Not even close..."
+      title = "😂😂😂😂😂😂😂😂"
+      emojiLabel.text = "😂😂😂😂😂😂😂😂"
     }
 
     // Add the points for this round to the total score.
@@ -97,7 +114,7 @@ class ViewController: UIViewController {
     // has scored in this round. You use string interpolation to create this 
     // text string. The placeholder \(points) will be replaced by the value of
     // the points variable.
-    let message = "You scored \(points) points"
+    let message = "🚒 🚑 🚓"
 
     // Now that you have the title and the message, you can finally create the
     // UIAlertController object and show it.
@@ -106,7 +123,7 @@ class ViewController: UIViewController {
 
     // The following code is called after the player pressed the OK button to 
     // close the alert.
-    let action = UIAlertAction(title: "OK", style: .Default,
+    let action = UIAlertAction(title: "🚨", style: .Default,
         handler: {
           action in
           // This closure tells the app to start a new round and
@@ -129,6 +146,7 @@ class ViewController: UIViewController {
     // digits after the decimal point. You round the value to a whole number and
     // store it in the currentValue variable.
     currentValue = lroundf(slider.value)
+//    println(currentValue)
 
     // If you want to see the current value as you're moving the slider, then
     // uncomment the println() line below (remove the //) and keep an eye on the
@@ -138,23 +156,23 @@ class ViewController: UIViewController {
   }
 
   // This method is called when the player taps the "Start Over" button.
-  @IBAction func startOver() {
-    // Here you do the same thing that you did in viewDidLoad, which is: start 
-    // a new game (which also starts the first round) and update the labels to 
-    // show these changes on the screen.
-    startNewGame()
-    updateLabels()
-
-    // Create a Core Animation transition. This will crossfade from what is
-    // currently on the screen to the changes that you're making below.
-    let transition = CATransition()
-    transition.type = kCATransitionFade
-    transition.duration = 1
-    transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-
-    // This makes the animation go.
-    view.layer.addAnimation(transition, forKey: nil)
-  }
+//  @IBAction func startOver() {
+//    // Here you do the same thing that you did in viewDidLoad, which is: start 
+//    // a new game (which also starts the first round) and update the labels to 
+//    // show these changes on the screen.
+//    startNewGame()
+//    updateLabels()
+//
+//    // Create a Core Animation transition. This will crossfade from what is
+//    // currently on the screen to the changes that you're making below.
+//    let transition = CATransition()
+//    transition.type = kCATransitionFade
+//    transition.duration = 1
+//    transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+//
+//    // This makes the animation go.
+//    view.layer.addAnimation(transition, forKey: nil)
+//  }
 
   // This method starts a new game. It resets the score and the round number to
   // 0, and then calls the startNewRound method to begin the first round.
@@ -169,10 +187,14 @@ class ViewController: UIViewController {
     // Calculate the new target value. You use the arc4random_uniform()
     // function to get a random number between 0 and 99 (inclusive), and then
     // add 1 to it to get a value between 1 and 100.
-    targetValue = 1 + Int(arc4random_uniform(100))
+    if score == 0 {
+      targetValue = 0;
+    } else {
+      targetValue = Int(arc4random_uniform(279))
+    }
 
     // Reset the slider to its center position.
-    currentValue = 1 + Int(arc4random_uniform(100))
+    currentValue = 278
     slider.value = Float(currentValue);
   }
 
@@ -180,7 +202,8 @@ class ViewController: UIViewController {
   // round number on the labels. You placed this into a method of its own, so you
   // don't have to duplicate this code all the time.
   func updateLabels() {
-    targetLabel.text = String(targetValue)
+    fireImage.frame.origin.x = CGFloat(targetValue);
+
   }
 
 
