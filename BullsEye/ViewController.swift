@@ -26,16 +26,11 @@ class ViewController: UIViewController {
   // This variable keeps track of the player's score.
   var score = 0
 
-  // This variable stores how many rounds the player has played so far.
-  var round = 0
-
   // These outlet variables are connected to the user interface elements (the
   // slider, labels and buttons) that you are interested in. By making outlets
   // for them you can refer to these controls from the code.
   @IBOutlet weak var slider: UISlider!
   @IBOutlet weak var targetLabel: UILabel!
-  @IBOutlet weak var scoreLabel: UILabel!
-  @IBOutlet weak var roundLabel: UILabel!
 
   // This method is called while the app is starting up. At some point the main
   // view controller will be created. It will load its view from the storyboard
@@ -51,23 +46,20 @@ class ViewController: UIViewController {
     startNewGame()
     updateLabels()
 
-    let thumbImageNormal = UIImage(named: "SliderThumb-Normal")
+    let thumbImageNormal = UIImage(named: "Fire-engine1")
     slider.setThumbImage(thumbImageNormal, forState: .Normal)
 
-    let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")
+    let thumbImageHighlighted = UIImage(named: "Fire-engine2")
     slider.setThumbImage(thumbImageHighlighted, forState: .Highlighted)
 
-    let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
 
-    if let trackLeftImage = UIImage(named: "SliderTrackLeft") {
-      let trackLeftResizable = trackLeftImage.resizableImageWithCapInsets(insets)
-      slider.setMinimumTrackImage(trackLeftResizable, forState: .Normal)
-    }
+    if let transparentImage = UIImage(named: "Transparent") {
+      slider.setMinimumTrackImage(transparentImage, forState: .Normal)
+      slider.setMaximumTrackImage(transparentImage, forState: .Normal)
 
-    if let trackRightImage = UIImage(named: "SliderTrackRight") {
-      let trackRightResizable = trackRightImage.resizableImageWithCapInsets(insets)
-      slider.setMaximumTrackImage(trackRightResizable, forState: .Normal)
     }
+    self.view.bringSubviewToFront(slider)
+
   }
 
   // This method is called when the player taps the "Hit Me!" button. It will
@@ -168,14 +160,12 @@ class ViewController: UIViewController {
   // 0, and then calls the startNewRound method to begin the first round.
   func startNewGame() {
     score = 0
-    round = 0
     startNewRound()
   }
 
   // This method starts a new round.
   func startNewRound() {
     // Increment the round number.
-    round++
     // Calculate the new target value. You use the arc4random_uniform()
     // function to get a random number between 0 and 99 (inclusive), and then
     // add 1 to it to get a value between 1 and 100.
@@ -191,8 +181,6 @@ class ViewController: UIViewController {
   // don't have to duplicate this code all the time.
   func updateLabels() {
     targetLabel.text = String(targetValue)
-    scoreLabel.text = String(score)
-    roundLabel.text = String(round)
   }
 
 
