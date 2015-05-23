@@ -27,12 +27,14 @@ class AboutViewController: UIViewController {
       let baseURL = NSURL.fileURLWithPath(NSBundle.mainBundle().bundlePath)
       webView.loadData(htmlData, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: baseURL)
     }
-    
+
   }
-  
+
   @IBAction func mailTo() {
     let email = "musuisui@gmail.com"
-    let url = NSURL(string: "mailto:\(email)")
+    let tit = "Feedback%20for%20Firefighting(S1)"
+    let body = "Feature%20request%20or%20bug%20report?"
+    let url = NSURL(string: "mailto:\(email)?subject=\(tit)&body=\(body)")
     UIApplication.sharedApplication().openURL(url!)
   }
 

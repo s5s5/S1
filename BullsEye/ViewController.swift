@@ -32,6 +32,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var slider: UISlider!
   @IBOutlet weak var fireImage: UIImageView!
   @IBOutlet weak var emojiLabel: UILabel!
+  @IBOutlet weak var Extinguisher: UIImageView!
 
   // This method is called while the app is starting up. At some point the main
   // view controller will be created. It will load its view from the storyboard
@@ -62,16 +63,22 @@ class ViewController: UIViewController {
 
     startNewGame()
     updateLabels()
-    
+
     fireImage.animationImages = [
-      UIImage(named: "Fire1")!,
-      UIImage(named: "Fire2")!,
-      UIImage(named: "Fire3")!,
-      UIImage(named: "Fire4")!
+        UIImage(named: "Fire1")!,
+        UIImage(named: "Fire2")!,
+        UIImage(named: "Fire3")!,
+        UIImage(named: "Fire4")!
     ]
-    
     fireImage.animationDuration = 0.8
     fireImage.startAnimating()
+
+    Extinguisher.animationImages = [
+        UIImage(named: "Extinguisher1")!,
+        UIImage(named: "Extinguisher2")!
+    ]
+    Extinguisher.animationDuration = 1
+    Extinguisher.startAnimating()
 
   }
 
@@ -89,22 +96,22 @@ class ViewController: UIViewController {
     // the player did. In addition, you give the player 100 bonus points if he
     // has a perfect score and 50 bonus points if he was very close.
     var title: String
-    if difference == 0 {
+    if difference < 10 {
       title = "😄😗🙇👏🏻👍🏻😍😻✌🏻"
       emojiLabel.text = "😄😗🙇👏🏻👍🏻😍😻✌🏻"
-      points += 100
-    } else if difference < 50 {
-      title = "👏🏻👏🏻👏🏻👏🏻👏🏻👏🏻"
-      emojiLabel.text = "👏🏻👏🏻👏🏻👏🏻👏🏻👏🏻"
-      if difference == 1 {
-        points += 50
-      }
-    } else if difference < 100 {
-      title = "😙😙😙😙"
-      emojiLabel.text = "😙😙😙😙"
+//      points += 100
+    } else if difference < 30 {
+      title = "👏🏻👏🏻👏🏻👏🏻👏🏻👏🏻👏🏻"
+      emojiLabel.text = "👏🏻👏🏻👏🏻👏🏻👏🏻👏🏻👏🏻"
+//      if difference == 1 {
+//        points += 50
+//      }
+    } else if difference < 60 {
+      title = "😙😙😙😙😙😙"
+      emojiLabel.text = "😙😙😙😙😙😙"
     } else {
-      title = "😂😂😂😂😂😂😂😂"
-      emojiLabel.text = "😂😂😂😂😂😂😂😂"
+      title = "😂😂😂😂"
+      emojiLabel.text = "😂😂😂😂"
     }
 
     // Add the points for this round to the total score.
