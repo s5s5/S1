@@ -27,6 +27,13 @@ class AboutViewController: UIViewController {
       let baseURL = NSURL.fileURLWithPath(NSBundle.mainBundle().bundlePath)
       webView.loadData(htmlData, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: baseURL)
     }
+    
+  }
+  
+  @IBAction func mailTo() {
+    let email = "musuisui@gmail.com"
+    let url = NSURL(string: "mailto:\(email)")
+    UIApplication.sharedApplication().openURL(url!)
   }
 
   // This action is called when the user taps the Close button. In response, we
