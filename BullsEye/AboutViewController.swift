@@ -8,9 +8,7 @@
 
 import UIKit
 
-// This is the About screen. It shows the gameplay instructions in a web view.
-// It also has a Close button that closes the screen and returns the player to 
-// the main game screen.
+// 关于
 
 class AboutViewController: UIViewController {
 
@@ -20,7 +18,7 @@ class AboutViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Load the BullsEye.html file into the web view.
+    // 加载页面
     if let htmlFile = NSBundle.mainBundle().pathForResource("BullsEye",
         ofType: "html") {
       let htmlData = NSData(contentsOfFile: htmlFile)
@@ -30,6 +28,7 @@ class AboutViewController: UIViewController {
 
   }
 
+  // 通过WEB方式调起MAIL反馈
   @IBAction func mailTo() {
     let email = "musuisui@gmail.com"
     let tit = "Feedback%20for%20Firefighting(S1)"
@@ -38,9 +37,7 @@ class AboutViewController: UIViewController {
     UIApplication.sharedApplication().openURL(url!)
   }
 
-  // This action is called when the user taps the Close button. In response, we
-  // dismiss the About screen and automatically return to the main game screen
-  // (BullsEyeViewController).
+  // 关闭ABOUT页,带动画
   @IBAction func close() {
     dismissViewControllerAnimated(true, completion: nil)
   }

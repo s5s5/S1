@@ -21,15 +21,18 @@
                                 <rect key="frame" x="-4" y="0.0" width="576" height="320"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pld-9N-tHF">
-                                <rect key="frame" x="129" y="10" width="396" height="103"/>
+                                <rect key="frame" x="69" y="10" width="430" height="173"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fire1" translatesAutoresizingMaskIntoConstraints="NO" id="yVC-UY-GVO">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="103"/>
+                                        <rect key="frame" x="35" y="0.0" width="80" height="103"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fire-engine2" translatesAutoresizingMaskIntoConstraints="NO" id="UC8-tc-cC7">
+                                        <rect key="frame" x="308" y="0.0" width="122" height="174"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="396" id="BNv-3x-uVm"/>
-                                    <constraint firstAttribute="height" constant="103" id="hVu-po-FTq"/>
+                                    <constraint firstAttribute="width" constant="430" id="BNv-3x-uVm"/>
+                                    <constraint firstAttribute="height" constant="173" id="hVu-po-FTq"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kU9-c5-zsK">
@@ -89,10 +92,10 @@
                                     <constraint firstAttribute="width" constant="58" id="m3z-as-HMU"/>
                                 </constraints>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="278" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-K6-v71">
-                                <rect key="frame" x="94" y="10" width="400" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="308" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-K6-v71">
+                                <rect key="frame" x="69" y="10" width="430" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="396" id="4FJ-WV-7vg"/>
+                                    <constraint firstAttribute="width" constant="426" id="4FJ-WV-7vg"/>
                                 </constraints>
                                 <connections>
                                     <action selector="sliderMoved:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Skj-E4-zme"/>
@@ -106,7 +109,7 @@
                             <constraint firstItem="SDG-YA-MY4" firstAttribute="top" secondItem="kU9-c5-zsK" secondAttribute="bottom" constant="-20" id="5BR-zb-UQl"/>
                             <constraint firstItem="ENL-K6-v71" firstAttribute="top" secondItem="pnG-xk-jN8" secondAttribute="bottom" constant="10" id="Fqn-gW-tID"/>
                             <constraint firstItem="pld-9N-tHF" firstAttribute="top" secondItem="pnG-xk-jN8" secondAttribute="bottom" constant="10" id="Idc-9d-7sv"/>
-                            <constraint firstAttribute="centerX" secondItem="ENL-K6-v71" secondAttribute="centerX" constant="-10" id="Pld-Sm-Fia"/>
+                            <constraint firstAttribute="centerX" secondItem="ENL-K6-v71" secondAttribute="centerX" id="Pld-Sm-Fia"/>
                             <constraint firstItem="4vR-NB-pmg" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" constant="20" id="c2L-q7-kEe"/>
                             <constraint firstItem="SDG-YA-MY4" firstAttribute="top" secondItem="ebC-Nk-pnk" secondAttribute="bottom" constant="10" id="cmE-AY-CZZ"/>
                             <constraint firstItem="SDG-YA-MY4" firstAttribute="top" secondItem="4vR-NB-pmg" secondAttribute="bottom" id="gi7-Vq-hmk"/>
@@ -114,7 +117,7 @@
                             <constraint firstItem="kU9-c5-zsK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="iW3-Ax-cpt"/>
                             <constraint firstItem="4vR-NB-pmg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="k7k-6y-3V1"/>
                             <constraint firstAttribute="centerX" secondItem="yJ8-ty-kbo" secondAttribute="centerX" id="koi-8D-gtF"/>
-                            <constraint firstAttribute="centerX" secondItem="pld-9N-tHF" secondAttribute="centerX" constant="-43" id="qhf-2Y-ahJ"/>
+                            <constraint firstAttribute="centerX" secondItem="pld-9N-tHF" secondAttribute="centerX" id="qhf-2Y-ahJ"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -122,6 +125,7 @@
                     <connections>
                         <outlet property="Extinguisher" destination="5iW-wL-ItX" id="cfe-iJ-Y5k"/>
                         <outlet property="emojiLabel" destination="a0n-k3-vco" id="sF1-i9-zbv"/>
+                        <outlet property="fireEngine" destination="UC8-tc-cC7" id="DbX-YJ-3gz"/>
                         <outlet property="fireImage" destination="yVC-UY-GVO" id="xwe-Tf-tkU"/>
                         <outlet property="slider" destination="ENL-K6-v71" id="ivW-QB-h32"/>
                     </connections>
@@ -205,6 +209,7 @@
         <image name="Button-Highlighted" width="100" height="37"/>
         <image name="Button-Normal" width="100" height="37"/>
         <image name="Extinguisher1" width="58" height="66"/>
+        <image name="Fire-engine2" width="122" height="174"/>
         <image name="Fire1" width="80" height="103"/>
         <image name="Fireman" width="65" height="135"/>
         <image name="Pop" width="107" height="60"/>
