@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     let difference = abs(currentValue - targetValue)
     // Calculate how many points the player has scored. The player gets more
     // points the closer he is to the target. The maximum score is 100 points.
-    var points = 100 - difference
+    let points = 100 - difference
 
     // It's fun to change the title of the alert popup depending on how well
     // the player did. In addition, you give the player 100 bonus points if he

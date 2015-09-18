@@ -30,7 +30,7 @@ class AboutViewController: UIViewController, UITextFieldDelegate {
         ofType: "html") {
       let htmlData = NSData(contentsOfFile: htmlFile)
       let baseURL = NSURL.fileURLWithPath(NSBundle.mainBundle().bundlePath)
-      webView.loadData(htmlData, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: baseURL)
+      webView.loadData(htmlData!, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: baseURL)
     }
 
   }
@@ -59,8 +59,8 @@ class AboutViewController: UIViewController, UITextFieldDelegate {
   }
 
   func textFieldShouldReturn(num3: UITextField) -> Bool {
-    var num3Value = num3.text
-    var temp = String(num1Value + num2Value)
+    let num3Value = num3.text
+    let temp = String(num1Value + num2Value)
     if (num3Value == temp) {
       mailTo()
     }
@@ -70,10 +70,10 @@ class AboutViewController: UIViewController, UITextFieldDelegate {
 
   // 通过WEB方式调起MAIL反馈
   func mailTo() {
-    var email = "musuisui@gmail.com"
-    var tit = "Feedback%20for%20Firefighting(S1)"
-    var body = "Feature%20request%20or%20bug%20report?"
-    var url = NSURL(string: "mailto:\(email)?subject=\(tit)&body=\(body)")
+    let email = "musuisui@gmail.com"
+    let tit = "Feedback%20for%20Firefighting(S1)"
+    let body = "Feature%20request%20or%20bug%20report?"
+    let url = NSURL(string: "mailto:\(email)?subject=\(tit)&body=\(body)")
     UIApplication.sharedApplication().openURL(url!)
   }
 
